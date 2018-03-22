@@ -1,7 +1,14 @@
-# Building rpm on RHEL
+# Building rpm on RHEL/CentOS
 
 ## Prerequisites
-$ sudo yum install rpm-build
+$ curl -sL https://rpm.nodesource.com/setup_8.x | sudo -E bash -
+$ sudo yum -y install nodejs
+
+## Create a package
+$ npm install
+$ sudo yum -y install rpm-build
+$ npm run package:linux
+$ npm run package:redhat-installer
 
 
 # Building deb on Ubuntu

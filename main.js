@@ -13,7 +13,13 @@ let mainWindow;
 
 function createWindow () {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 800, height: 600});
+  mainWindow = new BrowserWindow({
+      width: 600,
+      height: 400,
+      minWidth: 400,
+      minHeight: 300,
+      icon: path.join(__dirname, 'assets/app-icon/png/512.png')
+  });
   // remove the default menu
   mainWindow.setMenu(null);
   //set our own menu
