@@ -1,0 +1,33 @@
+{
+  "name": "web_box_connect",
+  "productName": "web_box_connect",
+  "version": "1.0.0",
+  "description": "Web box app description",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "package": "npm-run-all package:",
+    "package:linux": "electron-packager . --overwrite --platform=linux --arch=x64 --out=out",
+    "package:mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --out=out --icon=assets/app-icon/mac/app.icns",
+    "package:win": "electron-packager . --overwrite --platform=win32 --arch=ia32 --out=out --icon=assets/app-icon/win/app.ico",
+    "package:redhat-installer": "electron-installer-redhat --src out/web_box_connect-linux-x64/ --dest dist/installers/ --arch=x86_64",
+    "package:debian-installer": "electron-installer-debian --src out/web_box_connect-linux-x64/ --dest dist/installers/ --arch amd64",
+    "package:win-installer": "node ./script/win-installer.js"
+  },
+  "repository": "https://github.com/chudyandrej/web_box_connect.git",
+  "keywords": [
+    "Electron"
+  ],
+  "author": "to be added",
+  "license": "license",
+  "devDependencies": {
+    "electron": "~1.8.2",
+    "electron-installer-debian": "^0.8.1",
+    "electron-installer-dmg": "^0.2.1",
+    "electron-installer-redhat": "^0.5.0",
+    "electron-packager": "^11.1.0",
+    "electron-winstaller": "^2.6.4",
+    "npm-run-all": "^4.1.2",
+    "rimraf": "^2.6.2"
+  }
+}
