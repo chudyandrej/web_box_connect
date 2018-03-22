@@ -1,6 +1,6 @@
 {
-  "name": "web_box_connect",
-  "productName": "web_box_connect",
+  "name": "web-box-connect",
+  "productName": "web-box-connect",
   "version": "1.0.0",
   "description": "Web box app description",
   "main": "main.js",
@@ -10,8 +10,8 @@
     "package:linux": "electron-packager . --overwrite --platform=linux --arch=x64 --out=out",
     "package:mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --out=out --icon=assets/app-icon/mac/app.icns",
     "package:win": "electron-packager . --overwrite --platform=win32 --arch=ia32 --out=out --icon=assets/app-icon/win/app.ico",
-    "package:redhat-installer": "electron-installer-redhat --src out/web_box_connect-linux-x64/ --dest dist/installers/ --arch=x86_64",
-    "package:debian-installer": "electron-installer-debian --src out/web_box_connect-linux-x64/ --dest dist/installers/ --arch amd64",
+    "package:redhat-installer": "electron-installer-redhat --src out/web-box-connect-linux-x64/ --dest dist/installers/ --arch=x86_64",
+    "package:debian-installer": "electron-installer-debian --src out/web-box-connect-linux-x64/ --dest dist/installers/ --arch amd64 --config debian.json",
     "package:win-installer": "node ./script/win-installer.js"
   },
   "repository": "https://github.com/chudyandrej/web_box_connect.git",
