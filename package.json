@@ -6,6 +6,7 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
+    "install-unix-installers": "npm install electron-installer-debian electron-installer-dmg electron-installer-redhat",
     "package": "npm-run-all package:",
     "package:linux": "electron-packager . --overwrite --platform=linux --arch=x64 --out=out",
     "package:mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --out=out --icon=assets/app-icon/mac/app.icns",
@@ -22,9 +23,6 @@
   "license": "license",
   "devDependencies": {
     "electron": "~1.8.2",
-    "electron-installer-debian": "^0.8.1",
-    "electron-installer-dmg": "^0.2.1",
-    "electron-installer-redhat": "^0.5.0",
     "electron-packager": "^11.1.0",
     "electron-winstaller": "^2.6.4",
     "npm-run-all": "^4.1.2",

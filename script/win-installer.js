@@ -15,15 +15,16 @@ deleteOutputFolder()
 function getInstallerConfig () {
   const rootPath = path.join(__dirname, '..');
   const outPath = path.join(rootPath, 'out');
+  const distPath = path.join(rootPath, 'dist');
 
   return Promise.resolve({
-    appDirectory: path.join(outPath, 'web_box_connect-win32-ia32'),  //productName-platform-arch
-    exe: 'web_box_connect.exe',
+    appDirectory: path.join(outPath, 'web-box-connect-win32-ia32'),  //productName-platform-arch
+    exe: 'web-box-connect.exe',
     iconUrl: 'https://raw.githubusercontent.com/electron/electron-api-demos/master/assets/app-icon/win/app.ico',
     loadingGif: path.join(rootPath, 'assets', 'img', 'loading.gif'),
     noMsi: true,
-    outputDirectory: path.join(outPath, 'windows-installer'),
-    setupExe: 'web_box_connect.exe',
+    outputDirectory: path.join(distPath, 'windows-installer'),
+    setupExe: 'web-box-connect.exe',
     setupIcon: path.join(rootPath, 'assets', 'app-icon', 'win', 'app.ico'),
     skipUpdateIcon: true
   })
